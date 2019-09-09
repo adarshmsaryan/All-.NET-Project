@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model2StoreContainer">
+    <EntitySet Name="tbl_customer" EntityType="Model2.Store.tbl_customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_order" EntityType="Model2.Store.tbl_order" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="tbl_customertbl_order" Association="Model2.Store.tbl_customertbl_order">
+      <End Role="tbl_customer" EntitySet="tbl_customer" />
+      <End Role="tbl_order" EntitySet="tbl_order" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbl_customer">
+    <Key>
+      <PropertyRef Name="Custid" />
+    </Key>
+    <Property Name="Custid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="custName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_order">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="tbl_customerCustid" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="tbl_customertbl_order">
+    <End Role="tbl_customer" Type="Model2.Store.tbl_customer" Multiplicity="1" />
+    <End Role="tbl_order" Type="Model2.Store.tbl_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_customer">
+        <PropertyRef Name="Custid" />
+      </Principal>
+      <Dependent Role="tbl_order">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model2Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_customer" EntityType="Model2.tbl_customer" />
+          <EntitySet Name="tbl_order" EntityType="Model2.tbl_order" />
+          <AssociationSet Name="tbl_customertbl_order" Association="Model2.tbl_customertbl_order">
+            <End Role="tbl_customer" EntitySet="tbl_customer" />
+            <End Role="tbl_order" EntitySet="tbl_order" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_customer">
+          <Key>
+            <PropertyRef Name="Custid" />
+          </Key>
+          <Property Name="Custid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="custName" Type="String" Nullable="false" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <NavigationProperty Name="tbl_order" Relationship="Model2.tbl_customertbl_order" FromRole="tbl_customer" ToRole="tbl_order" />
+        </EntityType>
+        <EntityType Name="tbl_order">
+          <Key>
+            <PropertyRef Name="orderid" />
+          </Key>
+          <Property Name="orderid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="quantity" Type="String" Nullable="false" />
+          <Property Name="custid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_customer" Relationship="Model2.tbl_customertbl_order" FromRole="tbl_order" ToRole="tbl_customer" />
+          <Property Name="tbl_customerCustid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="tbl_customertbl_order">
+          <End Type="Model2.tbl_customer" Role="tbl_customer" Multiplicity="1" />
+          <End Type="Model2.tbl_order" Role="tbl_order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_customer">
+              <PropertyRef Name="Custid" />
+            </Principal>
+            <Dependent Role="tbl_order">
+              <PropertyRef Name="custid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model2StoreContainer" CdmEntityContainer="Model2Container">
+    <EntitySetMapping Name="tbl_customer">
+      <EntityTypeMapping TypeName="IsTypeOf(Model2.tbl_customer)">
+        <MappingFragment StoreEntitySet="tbl_customer">
+          <ScalarProperty Name="Custid" ColumnName="Custid" />
+          <ScalarProperty Name="custName" ColumnName="custName" />
+          <ScalarProperty Name="city" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_order">
+      <EntityTypeMapping TypeName="IsTypeOf(Model2.tbl_order)">
+        <MappingFragment StoreEntitySet="tbl_order">
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="custid" ColumnName="custid" />
+          <ScalarProperty Name="tbl_customerCustid" ColumnName="tbl_customerCustid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

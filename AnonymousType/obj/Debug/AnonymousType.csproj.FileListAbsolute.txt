@@ -1,0 +1,6 @@
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\bin\Debug\AnonymousType.exe.config
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\bin\Debug\AnonymousType.exe
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\bin\Debug\AnonymousType.pdb
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\obj\Debug\AnonymousType.csprojResolveAssemblyReference.cache
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\obj\Debug\AnonymousType.exe
+c:\users\adarsha.ms\documents\visual studio 2015\Projects\AdvanceDotNetprjs\AnonymousType\obj\Debug\AnonymousType.pdb

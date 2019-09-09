@@ -1,0 +1,17 @@
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\CodeFirstWindform.exe.config
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\CodeFirstWindform.exe
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\CodeFirstWindform.pdb
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\EntityFramework.dll
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\EntityFramework.xml
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Form1.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Properties.Resources.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.csproj.GenerateResource.Cache
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.exe
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.pdb
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Migrations.InitialCreate.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Migrations.depttableadded.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Migrations.deptcolumnchanged.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Migrations.Empidcolumnchanged.resources
+C:\Users\Adarsha.MS\Documents\Visual Studio 2015\Projects\AdvanceDotNetprjs\CodeFirstWindform\obj\Debug\CodeFirstWindform.Migrations.DeptId.resources
